@@ -9,12 +9,8 @@ const getWorldParams = () => {
 const config = {
   import: ['src/**/*.ts'],
   format: [
-    // 'message:e2e/reports/cucumber-report.ndjson',
-    'json:reports/cucumber-report.json',
-    'html:reports/report.html',
-    'summary',
-    'progress-bar',
     "allure-cucmberjs/reporter"
+    
   ],
   formatOptions: { snippetInterface: 'async-await' },
   worldParameters: getWorldParams()
