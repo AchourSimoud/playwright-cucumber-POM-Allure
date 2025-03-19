@@ -2,7 +2,7 @@ Feature: Login
 
   @positive
   Scenario: Successful login
-    Given Je visite la page de connexion "http://192.168.1.95:9091/admin"
+    Given Je visite la page de connexion "http://172.18.0.1:8030/admin/login/?next=/admin/"
     When Je saisis "testeur_integration" dans le champ Nom d utilisateur
     And Je saisis "testeur_qa" dans le champ Mot de passe
     And Je clique sur le bouton login
@@ -10,7 +10,7 @@ Feature: Login
 
   @negative
   Scenario: Failed login avec username incorrect et password correct
-    Given Je visite la page de connexion "http://192.168.1.95:9091/admin"
+    Given Je visite la page de connexion "http://172.18.0.1:8030/admin/login/?next=/admin/"
     When Je saisis "testeur_integration" dans le champ Nom d utilisateur
     And Je saisis "testeur_qa" dans le champ Mot de passe
     And Je clique sur le bouton login
@@ -18,7 +18,7 @@ Feature: Login
 
   @negative
   Scenario: Failed login avec username correct et password incorrect
-    Given Je visite la page de connexion "http://192.168.1.95:9091/admin"
+    Given Je visite la page de connexion "http://172.18.0.1:8030/admin/login/?next=/admin/"
     When Je saisis "testeur_integration" dans le champ Nom d utilisateur
     And Je saisis "testeur_qa" dans le champ Mot de passe
     And Je clique sur le bouton login
